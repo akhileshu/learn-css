@@ -1,0 +1,72 @@
+/* In CSS, the term "closest positioned ancestor" refers to the nearest ancestor element of a given element that has a CSS positioning other than the default position: static; */
+
+/* ---------------------------------------------------------------------------------------- */
+
+.parent {
+  position: relative;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  width: 300px;
+  background-color: steelblue;
+}
+.one,
+.two,
+.three,
+.four {
+  width: 200px;
+  height: 40px;
+  border: 2px solid red;
+  background-color: greenyellow;
+}
+
+/* position: static; */
+/* The element is positioned according to the normal flow of the document. The top, right, bottom, left, and z-index properties have no effect. This is the default value.  */
+
+.one {
+  position: relative;
+  left: 30px;
+}
+
+/* relative */
+/*offset relative to itself based on the values of top, right, bottom, and left. The offset does not affect the position of any other elements; thus, the space given for the element in the page layout is the same as if position were static.
+->exactly as static but allows 4 things static does not 
+t,b,l,r
+->this div is removed from doc flow, The div will move 30 pixels from left From where it was initially In static position. 
+->in general position: relative; is not used to provide t,b,l,r because it's confuising */
+/* ------------------------------------ */
+.two {
+  position: absolute;
+  top: 0;
+}
+
+/* absolute */
+/* The element is removed from the normal document flow, and no space is created for the element in the page layout. The element is positioned relative to its closest positioned ancestor (if any) or to the initial containing block. Its final position is determined by the values of top, right, bottom, and left. 
+->doc pretends  like it was completely deleted, useCase-parent contaier is positioned means relateive,absolute,fixed,static etc, and child is position: absolute; result- top: 0;
+left: 0; will be calculated with the parent contaier, child's position will be relative to parent*/
+
+/* ------------------------------------ */
+
+.three {
+  position: fixed;
+  bottom: 0;
+}
+/* Fixed position; never moves on scroll */
+/* The element is removed from the normal document flow, and no space is created for the element in the page layout. The element is positioned relative to the viewport in the case of visual media. Its final position is determined bythe values of top, right, bottom, and left. 
+->always fixed to screen t,b,l,r will be calculated from html document,
+*/
+/* ------------------------------------ */
+
+.four {
+  background-color: #f26161;
+  position: sticky;
+  top: 0;
+}
+/* 
+  ->always fixed to screen t,b,l,r will be calculated from html document,
+  ->position: sticky will make an element fixed relative to its nearest scrolling ancestor, which is usually the parent container
+  ->The key distinction between position: sticky and position: fixed is that position: fixed elements are fixed to the viewport (the document), while position: sticky elements are fixed inside their nearest scrolling ancestor, typically a parent container. This behavior of staying within the parent container until a certain scroll point is what makes position: sticky quite useful for creating effects like sticky headers or sidebars in web development. It provides a way to create elements that are initially part of the document flow but become fixed within a specific container as the user scrolls.
+*/

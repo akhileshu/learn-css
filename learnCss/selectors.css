@@ -1,0 +1,90 @@
+/*  Attribute selectors */
+/* --------------------------- */
+
+/*
+Exact Value Matching [attribute="value"]:
+Partial Value Matching [attribute^="value"], [attribute$="value"], 
+Presence of Attribute [attribute]:
+Multiple Attribute Selectors [attribute1][attribute2]:Selects elements that have both specified attributes.
+ */
+
+
+/* Class selectors */
+/* ---------------------------- */
+
+/* All elements with class="spacious" */
+.spacious {
+    margin: 2em;
+}
+
+/* All <li> elements with class="spacious" */
+li.spacious {
+    margin: 2em;
+}
+
+/* All <li> elements with a class list that includes both "spacious" and "elegant" */
+/* For example, class="elegant retro spacious" */
+li.spacious.elegant {
+    margin: 2em;
+}
+
+/* Selecting an element with a specific class within a specific section */
+
+/* In this case, the class selectors will style any element with the class "navigation" that is inside an element with the class "sidebar." It's a bit more flexible compared to IDs and should be used when you want to apply styles to elements that share a common class within a particular section or context, even if they are not necessarily direct descendants. */
+.sidebar .navigation {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+
+
+/* ID selectors */
+/* ---------------------------- */
+
+/* Selecting an element with a specific ID */
+#unique-element {
+    color: blue;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+/* Selecting an element with a specific ID within a specific section */
+
+#sidebar #navigation {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Selecting an element with a specific ID and a specific class */
+#special-heading.highlight {
+    font-weight: bold;
+    color: orange;
+}
+
+/* Selecting <p> elements that are descendants of an element with a specific ID */
+#parent-container p {
+    margin: 10px;
+}
+
+
+/* Selecting a specific child element of an element with a specific ID */
+
+/* The > symbol is known as the child combinator. It is used to select elements that are direct children of the element on the left side of the combinator */
+#menu>li {
+    list-style: none;
+}
+/* achieve similar result with class
+To select descendants of an element with a specific class, use .class-name selector.
+To select specific child elements of an element with a specific class, use .class-name > selector. */
+
+/* Using pseudo-classes with an element with a specific ID */
+#submit-button:hover {
+    background-color: green;
+}
+
+/* Applying styles to an element with a specific ID based on its state */
+#input-field:focus {
+    border: 2px solid blue;
+}

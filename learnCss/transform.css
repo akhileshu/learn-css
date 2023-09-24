@@ -1,0 +1,62 @@
+.box,
+.box2 {
+  height: 200px;
+  width: 200px;
+  background-color: rgb(228, 95, 95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 60px;
+}
+
+/*deg or turn for rotate*/
+
+/* give x,y or single for both ,scale used for inc or dec size */
+
+/*we can pass 2 values for translate(),+x or -x , +y or -y, for right left bottom top ,translateX() & translateY() to move in 4 directions */
+
+/* skew -stretch out of shape pass 2 values for x and y or use skewX() or skewY()*/
+
+/*
+
+
+ .box 
+  transform: rotate(15deg);
+}
+.box {
+  transform: scale(1.5, 1);
+}
+.box {
+  transform: translate(50px, 50px);
+} 
+.box {
+    transform: skew(30deg ,-10deg);
+  } 
+
+
+*/
+
+/* combine multiple transform properties */
+.box{
+    transform:rotate(20deg) scale(.75) translateX(350px) ;
+}
+/* when want to overwrite need to overwrite every transform property else only lastly defined transform will be applied */
+
+
+
+
+/* with % in translate its easy to place elements with respect to their own width and height */
+
+/* usecase -to center a div - remove display flex on box to see result*/
+/* .box{
+    position: relative;
+}
+.box::after{
+    content: 'after';
+    background-color: rgb(28, 101, 225);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+} */

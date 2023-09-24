@@ -1,0 +1,29 @@
+/* In CSS, the `box-sizing` property is used to control how the total width and height of an element are calculated, including its content, padding, and border. It defines whether these properties should be included in the element's specified width and height, or if they should be added to it.
+
+There are two main values for the `box-sizing` property:
+
+1. **`content-box` (Default)**: This is the default value. In this mode, the width and height of an element are calculated based on the content size, excluding padding and border. In other words, if you set the width of an element to 200 pixels, the padding and border will be added to that width, making the total width of the element greater than 200 pixels. */
+
+
+.box {
+    width: 200px;
+    padding: 20px;
+    border: 2px solid #000;
+    /* Total width: 200px (content) + 40px (padding) + 4px (border) = 244px */
+    box-sizing: content-box;
+}
+
+
+/* 2. **`border-box`**: In this mode, the width and height of an element include the content size, padding, and border. This means that if you set the width of an element to 200 pixels, the padding and border will be included within that width, keeping the total width at 200 pixels. */
+
+
+.box {
+    width: 200px;
+    padding: 20px;
+    border: 2px solid #000;
+    /* Total width: 200px (content, padding, and border combined) */
+    box-sizing: border-box;
+
+}
+
+/* The `box-sizing` property is particularly useful for controlling the layout of elements in web design. The `border-box` value is often preferred because it simplifies calculations when designing responsive layouts. It allows you to set the width of an element without worrying about adding extra values for padding and border. This helps maintain consistency in your designs and reduces unexpected layout issues. */

@@ -1,0 +1,31 @@
+.container{
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 20px;
+    display: flow-root;/* floating elts will be inside container -no overflow , the container will expand to contain the floating elements, and there won't be any overflow issues.*/
+    
+}
+img{
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+
+}
+.fImg{
+    float: left;
+}
+.sImg{
+    float: right;
+}
+
+/* -------------------------------------------- */
+
+.tImg{
+    float: right;
+}
+.sPara{
+    clear: both;
+}
+
+
+

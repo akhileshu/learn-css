@@ -1,0 +1,47 @@
+/* transition */
+.parent {
+  height: 300px;
+  width: 300px;
+  background-color: rgb(70, 70, 255);
+}
+.child {
+  height: 150px;
+  width: 150px;
+  background-color: rgb(255, 70, 240);
+  /* transition: transform 1s ease-in-out ; */
+}
+/* in below css when hover on parent apply style on child for smooth effect use transition on child*/
+/* we always apply transition on base class i.e child not on modified class i.e hover */
+/* transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay];*/
+/* for custom cublic brezier function we can do in chrome  */
+
+/* .parent:hover .child {
+  transform: translateX(100%);
+} */
+
+/* -----------animation---------------------------------- */
+/* convert transition to animation */
+.parent:hover .child {
+  animation: left-to-right 2s ease-in-out forwards infinite 0.5s;
+}
+
+@keyframes left-to-right {
+  0% {
+    transform: translateX(0) scale(0.5);
+    border-radius: 0%;
+  }
+  25% {
+    transform: translateY(100%) scale(1);
+  }
+  50% {
+    transform: translate(100%, 100%) scale(0.5);
+  }
+  75% {
+    transform: translateX(100%) scale(1);
+    border-radius: 50%;
+  }
+  100% {
+    transform: translateX(0) scale(0.5);
+  }
+}
+/* use animation-play-state :play/paused to controrl animation on hover /focus/active etc */

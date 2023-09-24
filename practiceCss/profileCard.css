@@ -1,0 +1,79 @@
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+}
+.container {
+  width: 230px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.top {
+  height: 130px;
+  background-color: #4071ed;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.top img {
+  object-fit: cover;
+  position: absolute;
+  top: 15px;
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  padding: 2px;
+  border: 2px solid white;
+  border-bottom: 2px solid #4071ed;
+}
+.center .name {
+  margin-top: 35px;
+  text-align: center;
+  font-weight: bold;
+}
+.center .designation {
+  text-align: center;
+  line-height: 2px;
+}
+.socialIcons {
+  display: flex;
+  justify-content: center;
+}
+.socialIcons i {
+  cursor: pointer;
+  
+  border-radius: 50%;
+  margin:10px 5px;
+}
+.bottom {
+  margin-top: 15px;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+.buttons button {
+  background-color: #4071ed;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 15px;
+  margin: auto 5px;
+  cursor: pointer;
+}
+.reach {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+.reach div {
+  font-size: small;
+  margin: auto 10px;
+}
+.reach span {
+  color: rgba(208, 208, 208, 0.659);
+}

@@ -1,0 +1,37 @@
+/* Select the first <div> */
+div:nth-child(1) {
+    display: block;
+    background-color: rgb(123, 101, 61);
+    /* CSS rules for the first <div> */
+
+
+
+}
+
+/* Select the second <div> */
+div:nth-child(2) {
+    display: inline;
+    background-color: rgb(180, 130, 37);
+
+    /* CSS rules for the second <div> */
+
+}
+
+/* Select the third <div> */
+div:nth-child(3) {
+    display: inline-block;
+    background-color: orange;
+
+    /* can set width height */
+    height: 30px;
+    width: 200px;
+    text-align: center;
+
+
+}
+
+/* Select the fourth <div> */
+div:nth-child(4) {
+    display: none;
+    /* CSS rules for the fourth <div> */
+}

@@ -1,0 +1,36 @@
+.sidebar {
+  position: fixed;
+  width: 280px;
+  left: -280px;
+  height: 100vh;
+  overflow: hidden;
+  transition: all 0.3s linear;
+  background-color: pink;
+}
+#check {
+  display: none;
+}
+#check:checked ~ .sidebar {
+  left: 0;
+}
+#check:checked ~ .btnOne {
+  opacity: 0;
+}
+.btnTwo{
+  background-color: red;
+  padding: 20px;
+
+
+
+}
+.btnOne {
+  transition: all 0.3s linear;
+  background-color: blanchedalmond;
+  position: sticky;
+  top: 0;
+  padding: 20px 100% 20px 20px;
+}
+
+p {
+  margin-top: 60px;
+}

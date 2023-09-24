@@ -1,0 +1,15 @@
+The `display` property in CSS determines how an HTML element should be displayed on the web page. Different values for the `display` property have different effects, and their usage depends on the desired layout and styling of the elements. Here are some widely used values for the `display` property:
+
+1. **`block`**: This value makes an element a block-level element, which means it starts on a new line and takes up the full width of its parent container. Common block-level elements include `<div>`, `<p>`, `<h1>` to `<h6>`, and `<ul>`.
+
+2. **`inline`**: An inline element only takes up as much width as necessary and doesn't start on a new line. Common inline elements include `<span>`, `<a>`, `<strong>`, and `<em>`.
+can't set properties of width and height
+
+3. **`inline-block`**: Combines the characteristics of both `inline` and `block`. It allows elements to sit inline with text content while still being able to set a width and height. It's often used for creating custom-styled inline elements.
+
+4. **`none`**: When set to `none`, the element is completely removed from the layout, making it invisible and not taking up any space on the page. This is commonly used for hiding elements via CSS, and it can be toggled using JavaScript.
+
+5. **`flex` and `inline-flex`**: These values are used in conjunction with CSS Flexbox for creating flexible and responsive layouts. Elements with `display: flex` become flex containers, and their child elements can be flex items.
+
+6. **`grid`**: This value is used with CSS Grid Layout to create two-dimensional grid-based layouts. Elements with `display: grid` become grid containers, and their child elements can be positioned within the grid.
+

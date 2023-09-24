@@ -1,0 +1,119 @@
+/* & nesting selector */
+/* ----------------------------- */
+/* Nested CSS styles
+This example uses nested CSS styling. */
+
+
+.example {
+  font-family: system-ui;
+  font-size: 1.2rem;
+
+  & a {
+    color: tomato;
+
+    &:hover,
+    &:focus {
+      color: ivory;
+      background-color: tomato;
+    }
+  }
+}
+
+/* more selectors */
+
+/* CSS selectors are patterns that are used to select and style HTML elements. There are several different types of CSS selectors, each with its own way of targeting elements on a web page. Here are some of the most common CSS selectors:
+
+1. **Universal Selector (`*`)**: Selects all elements on the page. */
+
+
+* {
+  /* Styles apply to all elements */
+}
+
+
+/* 2. **Type or Element Selector**: Selects elements of a specific type. */
+
+
+p {
+  /* Styles apply to all <p> elements */
+}
+
+
+/* 3. **Class Selector (`.classname`)**: Selects elements with a specific class attribute. */
+
+
+.highlight {
+  /* Styles apply to all elements with class="highlight" */
+}
+
+
+/* 4. **ID Selector (`#idname`)**: Selects a single element with a specific ID attribute (IDs should be unique). */
+
+
+#header {
+  /* Styles apply to the element with id="header" */
+}
+
+
+/* 5. **Descendant Selector (Whitespace)**: Selects an element that is a descendant of another element. */
+
+
+article p {
+  /* Styles apply to <p> elements inside <article> elements */
+}
+
+
+/* 6. **Child Selector (`>`)**: Selects direct children of an element. */
+
+
+ul>li {
+  /* Styles apply to <li> elements that are direct children of <ul> elements */
+}
+
+
+/* 7. **Adjacent Sibling Selector (`+`)**: Selects an element that is immediately preceded by a specified element. */
+
+
+h2+p {
+  /* Styles apply to <p> elements immediately following <h2> elements */
+}
+
+/* General Sibling Selector */
+h2~p {
+  color: purple;
+}
+
+/* you can use a comma (,) to group multiple selectors together, applying the same styles to all the selected elements */
+/* Applying styles to multiple selectors */
+h1,
+h2,
+h3 {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* 8. **Attribute Selector (`[attribute="value"]`)**: Selects elements with a specific attribute and value. */
+
+
+input[type="text"] {
+  /* Styles apply to <input> elements with type="text" */
+}
+
+
+/* 9. **Pseudo-Class Selector (`:pseudo-class`)**: Selects elements based on their state or position. */
+
+
+a:hover {
+  /* Styles apply to <a> elements when hovered over */
+}
+
+
+/* 10. **Pseudo-Element Selector (`::pseudo-element`)**: Selects a specific part of an element, such as the first line or first letter. */
+
+
+p::first-line {
+  /* Styles apply to the first line of <p> elements */
+}
+
+
+/* These are the basic CSS selectors, and you can combine them to create more complex and specific selector patterns. Understanding how to use these selectors effectively is essential for styling web pages efficiently and accurately. */
