@@ -1,0 +1,33 @@
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.wrapper{
+    position: relative;
+    margin: 10px;
+}
+label{
+    position: absolute;
+    left: 20px;
+    /* center on y axis inside input */
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    
+}
+input{
+    padding: 10px;
+}
+input:focus ~ label{
+    top: 0%;
+    background-color: #fff;
+    color: rgb(39, 125, 255);
+}
+input:focus{
+    outline: none;
+    border: 2px solid rgb(39, 125, 255);
+}
